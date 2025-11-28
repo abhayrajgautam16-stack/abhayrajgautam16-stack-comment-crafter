@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommentCraft - Options</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #0f62a6;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 30px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #374151;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #0f62a6;
+      box-shadow: 0 0 0 3px rgba(15, 98, 166, 0.1);
+    }
+    .api-key-input {
+      font-family: "Courier New", monospace;
+    }
+    button {
+      background: #0f62a6;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button:hover {
+      background: #0d4f8a;
+    }
+    button:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+    }
+    .success {
+      color: #10b981;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    .error {
+      color: #ef4444;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    .info-box {
+      background: #f3f4f6;
+      border-left: 4px solid #0f62a6;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    .info-box h3 {
+      margin-top: 0;
+      color: #0f62a6;
+      font-size: 16px;
+    }
+    .info-box p {
+      margin-bottom: 0;
+      color: #4b5563;
+    }
+    .status-indicator {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    .status-connected {
+      background: #10b981;
+    }
+    .status-disconnected {
+      background: #ef4444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CommentCraft Settings</h1>
+    <p class="subtitle">Configure your AI comment assistant</p>
+
+    <div class="info-box">
+      <h3>🔑 Gemini API Key</h3>
+      <p>Get your free API key from <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a></p>
+    </div>
+
+    <div class="form-group">
+      <label for="apiKey">
+        <span class="status-indicator" id="statusIndicator"></span>
+        API Key Status: <span id="statusText">Not configured</span>
+      </label>
+      <input 
+        type="text" 
+        id="apiKey" 
+        class="api-key-input"
+        placeholder="AIzaSy... (your Gemini API key)"
+      >
+    </div>
+
+    <div id="message"></div>
+
+    <button id="saveBtn">Save API Key</button>
+    <button id="testBtn">Test Connection</button>
+    <button id="clearBtn">Clear Key</button>
+
+    <div class="info-box" style="margin-top: 30px;">
+      <h3>📖 How to Use CommentCraft</h3>
+      <p>
+        1. Visit any supported platform (LinkedIn, X, Instagram, Facebook, Reddit)<br>
+        2. Click the CommentCraft extension icon or use the 🤖 button near comment boxes<br>
+        3. Generate AI-powered comments tailored to each platform<br>
+        4. Copy or insert comments with one click
+      </p>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
