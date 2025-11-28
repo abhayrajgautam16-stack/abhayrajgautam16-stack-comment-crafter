@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "CommentCraft Lite",
+  "version": "1.0",
+  "description": "Instant AI social media comments.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "CommentCraft Lite"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
